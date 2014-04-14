@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Frame Rate Calculator</title>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+	$("#button").click(function(){
+		math();
+	});
+});
+function math(){
+	var filmedFps = $("#fps").val(),
+		targetFps = $("#targetFps").val(),
+		holder = (filmedFps/targetFps),
+		length = $("#length").val(),
+		ELength = ((holder*length).toFixed(2));	//Stands for edited length
+		possiblePercent = (((1/holder)*100).toFixed(2));
+		$("#output").html("<h1>You may slow the footage down to "+possiblePercent+" % without dropping frames. And the clip will be "+ELength+" Seconds long.</h1>");
+	
+}
+</script>
+<style>
+body, html{
+	height: 100%;
+	width:auto;
+}
+#element{
+	margin-top: 5%;
+	height:80%;
+	width: 50%;
+	margin-left:25%;
+}
+#footage{
+	padding-top: 5%;
+}
+#fps{
+	width: 5em;
+}
+#output{
+	text-align:center;
+}
+</style>
+</head>
+<body>
+<div id="element">
+	<div id="footage"><!--called footage because it is the fps the footage was filmed at-->
+		<span>Footage filmed at </span><input type="text" id="fps" autocomplete="off"><span> fps</span>
+	</div><br/>
+	<div id="targetFootage">
+		<span>Target framerate</span>
+		<select id="targetFps">
+			<!--<option>23.976</option>-->
+			<option>24.00</option>
+			<option>25.00</option>
+			<option>29.97</option>
+			<option>30.00</option>
+			<option>50.00</option>
+			<option>59.94</option>
+			<option>60.00</option>
+		</select>
+		<span> fps</span>
+	</div></br>
+	<div>
+		<span>Length of clip being slowed down: </span><input type="text" id="length" autocomplete="off"><span> Seconds.</span>
+	</div></br>
+	<input type="button" value="convert" id="button"/>
+	<div id="output">
+	</div>
+</div>
+</body>
+</html>
