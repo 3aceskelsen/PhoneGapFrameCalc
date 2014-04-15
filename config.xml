@@ -18,7 +18,7 @@
 	
 	<icon src = "icon.png"  />
 	
-	<gap:splash src="Default-568h@2x.png" gap:platform="ios" width="640" height="1024" />
+	<gap:splash src="Default-568h@2x.png" gap:platform="ios" width="640" height="1136" />
 	<gap:splash src="assets/images/template/startup_landscape.jpg" gap:platform="ios" width="1024" height="768" />
 	<gap:splash src="assets/images/template/startup_portrait.jpg" gap:platform="ios" width="768" height="1024" />
 

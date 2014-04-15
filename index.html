@@ -9,6 +9,7 @@ $(document).ready(function(){
 	$("#button").click(function(){
 		math();
 	});
+  document.addEventListener('touchmove', function(e) { e.preventDefault(); }, false);
 });
 function math(){
 	var filmedFps = $("#fps").val(),
