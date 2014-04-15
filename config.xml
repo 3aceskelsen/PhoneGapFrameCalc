@@ -10,6 +10,7 @@
 	
 	<author href="http://www.byu.edu" email="zac.eskelsen@byu.edu">Zac Eskelsen</author>
 	
+	<preference name="DisallowOverscroll" value="true" />
 	<preference name="webviewbounce" value="false" />
 	<preference name="prerendered-icon" value="true" />
 	<preference name="ios-statusbarstyle" value="black-translucent" />
