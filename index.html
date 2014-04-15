@@ -9,7 +9,7 @@ $(document).ready(function(){
 	$("#button").click(function(){
 		math();
 	});
-  //document.addEventListener('touchmove', function(e) { e.preventDefault(); }, false);
+  document.addEventListener('touchmove', function(e) { e.preventDefault(); }, false);
 });
 function math(){
 	var filmedFps = $("#fps").val(),
@@ -24,8 +24,8 @@ function math(){
 </script>
 <style>
 body, html{
-	height: 1024px;
-	width:768px;
+	height: 100%;
+	width:100%;
 }
 #element{
 	margin-top: 5%;
